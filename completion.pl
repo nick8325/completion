@@ -202,7 +202,7 @@ replace_rule(ok).
 :- enqueue(plus(zero, X), X).
 :- enqueue(plus(minus(X), X), zero).
 :- enqueue(plus(plus(X, Y), Z), plus(X, plus(Y, Z))).
-:- enqueue(fuel(plus(X, Y)), plus(Y, X)).
+:- enqueue(plus(X, Y), plus(Y, X)).
 :- loop.
 :- write_rules.
-:- normalise(fuel(plus(plus(c, b), a)), X), writeln(X).
+:- normalise(plus(plus(c, b), a), X), writeln(X).
